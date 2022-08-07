@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: rootpassword
+      database: payment_db
+      port: 27017
+      host: localhost
+  webflux:
+    base-path: /api
+
