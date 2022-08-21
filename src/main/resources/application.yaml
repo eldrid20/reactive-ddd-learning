@@ -2,9 +2,9 @@ spring:
   data:
     mongodb:
       authentication-database: admin
-      username: root
+      username: admin
       password: rootpassword
-      database: payment_db
+      database: order_db
       port: 27017
       host: localhost
   webflux:
