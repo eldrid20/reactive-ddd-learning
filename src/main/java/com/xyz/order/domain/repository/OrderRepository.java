@@ -6,5 +6,5 @@ import reactor.core.publisher.Mono;
 public interface OrderRepository {
     Mono<Order> findById(String orderId);
 
-  Mono<Order> save(Order order);
+    Mono<Order> save(Order order);
 }

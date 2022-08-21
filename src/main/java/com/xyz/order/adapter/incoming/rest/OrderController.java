@@ -21,31 +21,31 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class OrderController {
 
-  private final OrderService orderService;
+    private final OrderService orderService;
 
-  @PostMapping(
-          value = "/v1/orders",
-          consumes = MediaType.APPLICATION_JSON_VALUE,
-          produces = MediaType.APPLICATION_JSON_VALUE)
-  public Mono<Order> createOrder(@RequestBody @Valid OrderDto orderDto) {
-    return orderService.createOrder(CreateOrder.of(orderDto.getAmount()));
-  }
+    @PostMapping(
+            value = "/v1/orders",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<Order> createOrder(@RequestBody @Valid OrderDto orderDto) {
+        return orderService.createOrder(CreateOrder.of(orderDto.getAmount()));
+    }
 
-  @PutMapping(
-          value = "/v1/orders/{orderId}/items",
-          consumes = MediaType.APPLICATION_JSON_VALUE,
-          produces = MediaType.APPLICATION_JSON_VALUE)
-  public Mono<Order> addOrderItem(
-          @PathVariable String orderId, @RequestBody @Valid OrderDto orderDto) {
-    return orderService.addOrderItem(
-            AddOrderItem.of(orderId, orderDto.getAmount()));
-  }
+    @PutMapping(
+            value = "/v1/orders/{orderId}/items",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<Order> addOrderItem(
+            @PathVariable String orderId, @RequestBody @Valid OrderDto orderDto) {
+        return orderService.addOrderItem(
+                AddOrderItem.of(orderId, orderDto.getAmount()));
+    }
 
-  @PutMapping(
-          value = "/v1/orders/{orderId}/complete",
-          consumes = MediaType.APPLICATION_JSON_VALUE,
-          produces = MediaType.APPLICATION_JSON_VALUE)
-  public Mono<Order> completeOrder(@PathVariable String orderId) {
-    return orderService.completeOrder(CompleteOrder.of(orderId));
-  }
+    @PutMapping(
+            value = "/v1/orders/{orderId}/complete",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<Order> completeOrder(@PathVariable String orderId) {
+        return orderService.completeOrder(CompleteOrder.of(orderId));
+    }
 }
