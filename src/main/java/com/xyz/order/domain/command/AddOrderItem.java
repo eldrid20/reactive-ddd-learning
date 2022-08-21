@@ -6,6 +6,6 @@ import java.math.BigDecimal;
 
 @Value(staticConstructor = "of")
 public class AddOrderItem {
-  String orderId;
-  BigDecimal amount;
+    String orderId;
+    BigDecimal amount;
 }

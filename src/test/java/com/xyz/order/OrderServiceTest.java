@@ -29,11 +29,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ActiveProfiles("test")
 class OrderServiceTest {
 
-    @Autowired
-    private OrderService orderService;
-
     @Container
     static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:latest");
+    @Autowired
+    private OrderService orderService;
 
     @DynamicPropertySource
     static void setProperties(DynamicPropertyRegistry registry) {

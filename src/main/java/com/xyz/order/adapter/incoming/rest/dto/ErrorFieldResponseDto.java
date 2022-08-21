@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class ErrorFieldResponseDto extends ErrorResponseDto {
-  private List<ErrorField> errorFields;
+    private List<ErrorField> errorFields;
 }

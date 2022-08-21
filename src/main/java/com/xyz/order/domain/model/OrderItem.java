@@ -9,14 +9,14 @@ import java.util.UUID;
 @Data
 @ToString
 public class OrderItem {
-  String id;
+    String id;
 
-  BigDecimal amount;
+    BigDecimal amount;
 
-  public static OrderItem of(BigDecimal amount) {
-    final var orderItem = new OrderItem();
-    orderItem.setId(UUID.randomUUID().toString());
-    orderItem.setAmount(amount);
-    return orderItem;
-  }
+    public static OrderItem of(BigDecimal amount) {
+        final var orderItem = new OrderItem();
+        orderItem.setId(UUID.randomUUID().toString());
+        orderItem.setAmount(amount);
+        return orderItem;
+    }
 }

@@ -9,5 +9,6 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 public class OrderDto {
-  @NotNull private BigDecimal amount;
+    @NotNull
+    private BigDecimal amount;
 }
