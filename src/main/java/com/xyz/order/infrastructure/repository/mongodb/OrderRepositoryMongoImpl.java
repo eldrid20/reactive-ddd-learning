@@ -10,15 +10,15 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class OrderRepositoryMongoImpl implements OrderRepository {
 
-  private final OrderMongoRepository orderMongoRepository;
+    private final OrderMongoRepository orderMongoRepository;
 
-  @Override
-  public Mono<Order> findById(String orderId) {
-    return orderMongoRepository.findById(orderId);
-  }
+    @Override
+    public Mono<Order> findById(String orderId) {
+        return orderMongoRepository.findById(orderId);
+    }
 
-  @Override
-  public Mono<Order> save(Order order) {
-    return orderMongoRepository.save(order);
-  }
+    @Override
+    public Mono<Order> save(Order order) {
+        return orderMongoRepository.save(order);
+    }
 }
