@@ -1,4 +1,4 @@
-package com.xyz.order.mongodb;
+package com.xyz.order.infrastructure.repository.mongodb;
 
 import com.xyz.order.domain.model.Order;
 import org.springframework.data.annotation.Id;
